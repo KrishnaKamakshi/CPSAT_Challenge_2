@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 public class Program2Test extends NSEIndiaSteps{
 	
 	@Test
-	public void test1() {
+	public void testNSEIndia() {
 		getURL();
 		for (int i = 0; i < 3; i++) {
 			ConfigConstants.valuOFMarketWindow = getTheTextByIndex(i);

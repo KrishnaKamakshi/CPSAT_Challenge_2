@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 public class Program4Test extends NSEIndiaSteps {
 
 	@Test(dataProvider = "companyName")
-	public void testCom(String testCases, String dataTest) throws Exception {
+	public void testCompany(String testCases, String dataTest) throws Exception {
 		getURL();
 		Thread.sleep(4000);
 		sendTheValueExcel(testCases, dataTest);

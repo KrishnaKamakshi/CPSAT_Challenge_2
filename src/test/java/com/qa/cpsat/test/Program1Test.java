@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 public class Program1Test extends AgileTestingAllianceSteps {
 
 	@Test
-	public void test1() throws Exception 
+	public void testCertifications() throws Exception 
 	{
 		getURL();
 		clickOnCertificationTab();

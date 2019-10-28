@@ -9,7 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 public class Program3Test extends NSEIndiaStepsTestNG {
 
 	@Test
-	public void test1() throws Exception {
+	public void testNSEScreenshot() throws Exception {
 		getURL();
 		sendTheValue();
 		Thread.sleep(2000);
