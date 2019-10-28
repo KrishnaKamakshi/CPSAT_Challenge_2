@@ -1,0 +1,177 @@
+[1570699477.385][INFO]: COMMAND InitSession {
+   "capabilities": {
+      "alwaysMatch": {
+
+      },
+      "desiredCapabilities": {
+         "browserName": "chrome",
+         "chromeOptions": {
+            "args": [  ],
+            "extensions": [  ]
+         },
+         "platform": "ANY",
+         "version": ""
+      },
+      "firstMatch": [ {
+         "browserName": "chrome"
+      } ],
+      "requiredCapabilities": {
+
+      }
+   },
+   "desiredCapabilities": {
+      "browserName": "chrome",
+      "chromeOptions": {
+         "args": [  ],
+         "extensions": [  ]
+      },
+      "platform": "ANY",
+      "version": ""
+   },
+   "requiredCapabilities": {
+
+   }
+}
+[1570699477.388][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1570699477.391][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1570699477.403][INFO]: Launching chrome: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --disable-web-resources --enable-automation --enable-logging --force-fieldtrials=SiteIsolationExtensions/Control --ignore-certificate-errors --load-extension="C:\Users\USER\AppData\Local\Temp\scoped_dir3852_1566\internal" --log-level=0 --metrics-recording-only --no-first-run --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\USER\AppData\Local\Temp\scoped_dir3852_19526" data:,
+[1570699478.371][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1570699480.339][WARNING]: Timed out connecting to Chrome, retrying...
+[1570699480.342][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1570699482.372][INFO]: RESPONSE InitSession {
+   "acceptInsecureCerts": false,
+   "acceptSslCerts": false,
+   "applicationCacheEnabled": false,
+   "browserConnectionEnabled": false,
+   "browserName": "chrome",
+   "chrome": {
+      "chromedriverVersion": "2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab)",
+      "userDataDir": "C:\\Users\\USER\\AppData\\Local\\Temp\\scoped_dir3852_19526"
+   },
+   "cssSelectorsEnabled": true,
+   "databaseEnabled": false,
+   "handlesAlerts": true,
+   "hasTouchScreen": false,
+   "javascriptEnabled": true,
+   "locationContextEnabled": true,
+   "mobileEmulationEnabled": false,
+   "nativeEvents": true,
+   "networkConnectionEnabled": false,
+   "pageLoadStrategy": "normal",
+   "platform": "Windows NT",
+   "rotatable": false,
+   "setWindowRect": true,
+   "~~~": "..."
+}
+[1570699482.566][INFO]: COMMAND MaximizeWindow {
+   "handle": "current",
+   "windowHandle": "current"
+}
+[1570699482.567][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1570699484.566][WARNING]: Timed out connecting to Chrome, retrying...
+[1570699484.568][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1570699486.707][INFO]: RESPONSE MaximizeWindow
+[1570699486.899][INFO]: COMMAND Navigate {
+   "url": "https://www.meripustak.com/"
+}
+[1570699486.899][INFO]: Waiting for pending navigations...
+[1570699486.915][INFO]: Done waiting for pending navigations. Status: ok
+[1570699487.470][INFO]: Waiting for pending navigations...
+[1570699489.331][INFO]: Done waiting for pending navigations. Status: ok
+[1570699489.331][INFO]: RESPONSE Navigate
+[1570699489.338][INFO]: COMMAND MaximizeWindow {
+   "handle": "current",
+   "windowHandle": "current"
+}
+[1570699489.339][INFO]: RESPONSE MaximizeWindow
+[1570699489.358][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": "//img[@src='/imes/meri_pustak_logo.png']"
+}
+[1570699489.358][INFO]: Waiting for pending navigations...
+[1570699489.460][INFO]: Done waiting for pending navigations. Status: ok
+[1570699489.704][INFO]: Waiting for pending navigations...
+[1570699489.844][INFO]: Done waiting for pending navigations. Status: ok
+[1570699489.844][INFO]: RESPONSE FindElement no such element: Unable to locate element: {"method":"xpath","selector":"//img[@src='/imes/meri_pustak_logo.png']"}
+  (Session info: chrome=77.0.3865.90)
+[1570699489.874][INFO]: COMMAND Screenshot {
+
+}
+[1570699489.874][INFO]: Waiting for pending navigations...
+[1570699489.898][INFO]: Done waiting for pending navigations. Status: ok
+[1570699490.496][INFO]: Waiting for pending navigations...
+[1570699490.498][INFO]: Done waiting for pending navigations. Status: ok
+[1570699490.499][INFO]: RESPONSE Screenshot "iVBORw0KGgoAAAANSUhEUgAABVYAAAJlCAYAAAAxcKmfAAABKWlDQ1BTa2lhAAAokX2Ru0oDQRSGP4OFV4hoYWGxldh4ScwmCDYmrsHSRCFRQTabTRCTddmsaG0t+AIWdj6Dhb2lIFj5EGJh7b8GmYDEM8yc7z9z5nYGUvPIUmnoBnFUKRetWv3QYsBcrxcy3Ebg6..."
+[1570699491.007][INFO]: COMMAND Screenshot {
+
+}
+[1570699491.008][INFO]: Waiting for pending navigations...
+[1570699491.009][INFO]: Done waiting for pending navigations. Status: ok
+[1570699491.473][INFO]: Waiting for pending navigations...
+[1570699491.474][INFO]: Done waiting for pending navigations. Status: ok
+[1570699491.475][INFO]: RESPONSE Screenshot "iVBORw0KGgoAAAANSUhEUgAABVYAAAJlCAYAAAAxcKmfAAABKWlDQ1BTa2lhAAAokX2Ru0oDQRSGP4OFV4hoYWGxldh4ScwmCDYmrsHSRCFRQTabTRCTddmsaG0t+AIWdj6Dhb2lIFj5EGJh7b8GmYDEM8yc7z9z5nYGUvPIUmnoBnFUKRetWv3QYsBcrxcy3Ebg6..."
+[1570699491.532][INFO]: COMMAND CloseWindow {
+
+}
+[1570699495.660][INFO]: RESPONSE CloseWindow
