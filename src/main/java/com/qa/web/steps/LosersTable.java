@@ -206,7 +206,7 @@ public class LosersTable extends BasicConfigChromeTestNG {
 		FileInputStream fis = new FileInputStream("src/main/resources/CompanyNames.xlsx");
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 		// XSSFSheet sheet = workbook.getSheetAt(1);
-		XSSFSheet sheet = workbook.getSheet("GainersNSETest");
+		XSSFSheet sheet = workbook.getSheet("LosersNSE");
 		int rowCountNameNew = driver.findElements(By.xpath("//table[@id='topLosers']/tbody/tr/td[8]")).size();
 		System.out.println(rowCountNameNew);
 		for (int i = 0; i < rowCountNameNew; i++) {
