@@ -1,9 +1,8 @@
 package com.qa.web.steps;
 
-import java.io.IOException;
 
 
-public class GainersSteps extends TestNames {
+public class GainersSteps extends GainersTable {
 
 	public void getValuesOfGainer() throws Exception {
 		testNamesSymbol();

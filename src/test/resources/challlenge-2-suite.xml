@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="CPSAT Challenge 2">
+    <classes>
+      <class name="com.qa.cpsat.test.Program2Test"/>
+      <class name="com.qa.cpsat.test.Program3Test"/>
+      <class name="com.qa.cpsat.test.Program4Test"/>
+      <class name="com.qa.cpsat.test.Program5Test"/>
+      <class name="com.qa.cpsat.test.Program6Test"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

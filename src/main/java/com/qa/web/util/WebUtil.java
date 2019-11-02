@@ -91,4 +91,9 @@ public class WebUtil extends DriverConfig{
 	{
 		return driver.findElements(By.xpath(xpath)).get(index).getText();
 	}
+	
+	public static void sleep() throws InterruptedException
+	{
+		Thread.sleep(3000);
+	}
 }

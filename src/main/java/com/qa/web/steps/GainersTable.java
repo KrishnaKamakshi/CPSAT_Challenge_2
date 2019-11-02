@@ -12,7 +12,7 @@ import org.openqa.selenium.By;
 
 import com.qa.config.BasicConfigChromeTestNG;
 
-public class TestNames extends BasicConfigChromeTestNG {
+public class GainersTable extends BasicConfigChromeTestNG {
 
 	public void testNamesSymbol() throws IOException
 
@@ -123,7 +123,7 @@ public class TestNames extends BasicConfigChromeTestNG {
 		}
 
 	}
-	
+
 	public void testTradeQty() throws Exception {
 
 		FileInputStream fis = new FileInputStream("src/main/resources/CompanyNames.xlsx");
@@ -151,7 +151,7 @@ public class TestNames extends BasicConfigChromeTestNG {
 		}
 
 	}
-	
+
 	public void testValues() throws Exception {
 
 		FileInputStream fis = new FileInputStream("src/main/resources/CompanyNames.xlsx");
@@ -179,7 +179,7 @@ public class TestNames extends BasicConfigChromeTestNG {
 		}
 
 	}
-	
+
 	public void testOpen() throws Exception {
 
 		FileInputStream fis = new FileInputStream("src/main/resources/CompanyNames.xlsx");
@@ -207,7 +207,7 @@ public class TestNames extends BasicConfigChromeTestNG {
 		}
 
 	}
-	
+
 	public void testHigh() throws Exception {
 
 		FileInputStream fis = new FileInputStream("src/main/resources/CompanyNames.xlsx");
@@ -235,7 +235,7 @@ public class TestNames extends BasicConfigChromeTestNG {
 		}
 
 	}
-	
+
 	public void testLow() throws Exception {
 
 		FileInputStream fis = new FileInputStream("src/main/resources/CompanyNames.xlsx");
@@ -263,7 +263,7 @@ public class TestNames extends BasicConfigChromeTestNG {
 		}
 
 	}
-	
+
 	public void testPreviousClose() throws Exception {
 
 		FileInputStream fis = new FileInputStream("src/main/resources/CompanyNames.xlsx");
@@ -291,7 +291,7 @@ public class TestNames extends BasicConfigChromeTestNG {
 		}
 
 	}
-	
+
 	public void testCA() throws Exception {
 
 		FileInputStream fis = new FileInputStream("src/main/resources/CompanyNames.xlsx");
@@ -301,7 +301,8 @@ public class TestNames extends BasicConfigChromeTestNG {
 		int rowCountNameNew = driver.findElements(By.xpath("//table[@id='topGainers']/tbody/tr/td[11]/img")).size();
 		System.out.println(rowCountNameNew);
 		for (int i = 0; i < rowCountNameNew; i++) {
-			String valueOfSymbolPerce = driver.findElements(By.xpath("//table[@id='topGainers']/tbody/tr/td[11]/img")).get(i).getAttribute("src");
+			String valueOfSymbolPerce = driver.findElements(By.xpath("//table[@id='topGainers']/tbody/tr/td[11]/img"))
+					.get(i).getAttribute("src");
 			System.out.println(valueOfSymbolPerce);
 
 			// Row rowAtVN = sheet.createRow(i);
@@ -318,13 +319,5 @@ public class TestNames extends BasicConfigChromeTestNG {
 		}
 
 	}
-
-
-
-
-
-	
-	
-	
 
 }

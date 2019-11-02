@@ -6,12 +6,13 @@ import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
+import com.qa.web.page.locators.NseIndiaPO;
 import com.qa.web.steps.GainersSteps;
 import com.qa.web.steps.LosersSteps;
 import com.qa.web.steps.NSEIndiaStepsTestNG;
+import com.qa.web.util.WebUtil;
 
 public class Program6Test extends NSEIndiaStepsTestNG {
 
@@ -19,42 +20,41 @@ public class Program6Test extends NSEIndiaStepsTestNG {
 	GainersSteps gainerTable = new GainersSteps();
 	String[] valuesStore = new String[10];
 	String[] valuesStoreTrim = new String[8];
-	float[] valuesStoreInt = new float[10];
+	float[] valuesStoreFloat = new float[10];
 
 	@Test(priority = 1)
-	public void tesWebTable() throws Exception {
+	public void testNSEWebsite() throws Exception {
 		getURL();
-		Thread.sleep(3000);
 		overLiveMarket();
-		Thread.sleep(3000);
+		WebUtil.sleep();
 		clickOnTab();
-		Thread.sleep(3000);
+		WebUtil.sleep();
 		gainerTable.getValuesOfGainer();
 		clickOnLosersTab();
+		WebUtil.sleep();
 		loserTable.getValuesOfLosers();
-		Thread.sleep(4000);
+		WebUtil.sleep();
 		clickOnGainerTab();
-		Thread.sleep(4000);
-		for (int i = 0; i < driver.findElements(By.xpath("//table[@id='topGainers']/tbody/tr/td[3]")).size(); i++) {
-			valuesStore[i] = driver.findElements(By.xpath("//table[@id='topGainers']/tbody/tr/td[3]")).get(i).getText();
-			valuesStoreInt[i] = Float.parseFloat(valuesStore[i].toString());
+		WebUtil.sleep();
+		int sizeOfDetails = sizeOfTabel();
+		for (int i = 0; i < sizeOfDetails; i++) {
+			valuesStore[i] = WebUtil.getTheValueByXpath(NseIndiaPO.getTableValue, i);
+			valuesStoreFloat[i] = Float.parseFloat(valuesStore[i].toString());
 		}
 
 		for (int k = 0; k < 9; k++) {
-			assertTrue(valuesStoreInt[k] >= valuesStoreInt[k + 1]);
+			assertTrue(valuesStoreFloat[k] >= valuesStoreFloat[k + 1]);
 		}
-
-		Thread.sleep(4000);
-
+		WebUtil.sleep();
 		clickOnLosersTab();
-
-		for (int i = 0; i < driver.findElements(By.xpath("//table[@id='topLosers']/tbody/tr/td[3]")).size(); i++) {
-			valuesStore[i] = driver.findElements(By.xpath("//table[@id='topLosers']/tbody/tr/td[3]")).get(i).getText();
-			valuesStoreInt[i] = Float.parseFloat(valuesStore[i].toString());
+		int sizeOfLoser = sizeOfTabelLosers();
+		for (int i = 0; i < sizeOfLoser; i++) {
+			valuesStore[i] = WebUtil.getTheValueByXpath(NseIndiaPO.getTableValueL, i);
+			valuesStoreFloat[i] = Float.parseFloat(valuesStore[i].toString());
 		}
 
 		for (int k = 0; k < 9; k++) {
-			assertTrue(valuesStoreInt[k] <= valuesStoreInt[k + 1]);
+			assertTrue(valuesStoreFloat[k] <= valuesStoreFloat[k + 1]);
 		}
 
 		String dateOfNSE = getDatefromWebsite();

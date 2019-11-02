@@ -5,7 +5,7 @@ public class NseIndiaPO {
 	public static String marketValueText = "//ul[@class='advanceTab']/li/p";
 	public static String markentValueValues = "//ul[@class='advanceTab']/li/span";
 	public static String keyWord = "keyword";
-	public static String faceValue = "//span[@id='faceValue']";
+	public static String faceValue = "//a[contains(text(),'Face Value')]";
 	public static String high52 = "//span[@id='high52']/font";
 	public static String low52 = "//span[@id='low52']/font";
 	public static String liveMarket = "//a[text()='Live Market']";
@@ -17,4 +17,5 @@ public class NseIndiaPO {
 	public static String mouseOverOnLive = "//a[text()='Live Market']";
 	public static String topGainersLosers = "//*[@id='main_liveany_ttg']/a";
 	public static String clickOnGainer = "//a[@id='tab7']";
-}
+	public static String getTableValue = "//table[@id='topGainers']/tbody/tr/td[3]";
+	public static String getTableValueL = "//table[@id='topLosers']/tbody/tr/td[3]";}

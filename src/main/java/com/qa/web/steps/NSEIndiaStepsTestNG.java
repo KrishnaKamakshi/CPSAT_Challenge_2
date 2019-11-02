@@ -30,6 +30,16 @@ public class NSEIndiaStepsTestNG extends BasicConfigFireFox {
 	public void getURL() {
 		WebUtil.getURLWebsite(NseIndiaPO.URL);
 	}
+	
+	@Step("Getting the Size")
+	public int sizeOfTabel() {
+		return WebUtil.gettingTheSize(NseIndiaPO.getTableValue);
+	}
+	
+	@Step("Getting the Losers Table")
+	public int sizeOfTabelLosers() {
+		return WebUtil.gettingTheSize(NseIndiaPO.getTableValueL);
+	}
 
 	@Step("Getting the value of the Market Text")
 	public String getTheTextByIndex(int index) {
