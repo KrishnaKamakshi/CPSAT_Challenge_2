@@ -2,7 +2,7 @@
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoftestt.com/azure/devops/pipelines/languages/java testing Automation - DevOps Automation testing 20122020
-# ToDo : drivers on cloud
+# ToDo : drivers on cloud by changing the yaml files 
 
 trigger:
 - azure-pipelines-newbranch
