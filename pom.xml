@@ -13,6 +13,7 @@
 		<jackson-jaxrs.version>2.9.6</jackson-jaxrs.version>
 		<aspectj.version>1.9.2</aspectj.version>
 		<allure.version>2.9.0</allure.version>
+		<compileSource>1.8</compileSource>
 	</properties>
 
 	<dependencies>
@@ -84,7 +85,7 @@
 		<dependency>
 			<groupId>io.qameta.allure</groupId>
 			<artifactId>allure-testng</artifactId>
-			<version>2.0-BETA19</version>
+			<version>2.13.8</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-junit4 -->
 		<dependency>
@@ -110,7 +111,7 @@
 				<version>2.22.1</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/${tests}.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/${suiteXmlFile}</suiteXmlFile>
 					</suiteXmlFiles>
 					<testFailureIgnore>true</testFailureIgnore>
 					<argLine>
@@ -123,7 +124,7 @@
 						<artifactId>aspectjweaver</artifactId>
 						<version>${aspectj.version}</version>
 					</dependency>
-				</dependencies>
+				</dependencies>		
 
 			</plugin>
 			<plugin>
@@ -158,6 +159,15 @@
 				<configuration>
 					<reportVersion>${allure.version}</reportVersion>
 					<allureDownloadUrl>https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/${allure.version}/allure-commandline-${allure.version}.zip</allureDownloadUrl>
+				</configuration>
+			</plugin>
+			<!-- Compiler plugin configures the java version to be usedfor compiling 
+				the code -->
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${compileSource}</source>
+					<target>${compileSource}</target>
 				</configuration>
 			</plugin>
 
