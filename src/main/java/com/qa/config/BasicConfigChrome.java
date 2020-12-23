@@ -16,7 +16,7 @@ public class BasicConfigChrome extends DriverConfig {
 	public void setUp() throws InterruptedException {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 
