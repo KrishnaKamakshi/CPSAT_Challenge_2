@@ -14,7 +14,9 @@ public class Program2Test extends NSEIndiaSteps{
 	
 	@Test
 	public void testNSEIndia() {
-		getURL();
+		getURL(); 
+
+
 		
 	}
 
