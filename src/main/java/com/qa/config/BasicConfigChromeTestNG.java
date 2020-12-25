@@ -19,7 +19,7 @@ public class BasicConfigChromeTestNG extends DriverConfig{
 	public void setUp() throws InterruptedException
 	{
 		ChromeOptions options = new ChromeOptions();
-Options.setBinary("drivers/chromedriver.exe");
+                options.setBinary("drivers/chromedriver.exe");
 		options.addArguments("--disable-notifications");
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");		
 		driver = new ChromeDriver(options);
