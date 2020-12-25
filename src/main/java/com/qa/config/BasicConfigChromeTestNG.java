@@ -19,9 +19,9 @@ public class BasicConfigChromeTestNG extends DriverConfig{
 	public void setUp() throws InterruptedException
 	{
 		ChromeOptions options = new ChromeOptions();
-                options.add_argument('--headless')
-                options.add_argument('--no-sandbox')
-                options.add_argument('--disable-dev-shm-usage')
+                options.add_argument('--headless');
+                options.add_argument('--no-sandbox');
+                options.add_argument('--disable-dev-shm-usage');
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 		options.setBinary("drivers/chromedriver.exe");
                 options.setExperimentalOption("useAutomationExtension", false);
