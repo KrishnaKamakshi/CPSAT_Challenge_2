@@ -20,7 +20,8 @@ public class BasicConfigChromeTestNG extends DriverConfig{
 	{
 		ChromeOptions options = new ChromeOptions();
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
-		options.setExperimentalOption("useAutomationExtension", false);
+		options.setBinary("drivers/chromedriver.exe");
+                options.setExperimentalOption("useAutomationExtension", false);
 		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		
