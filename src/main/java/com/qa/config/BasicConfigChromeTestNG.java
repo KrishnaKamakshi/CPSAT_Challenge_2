@@ -21,7 +21,8 @@ public class BasicConfigChromeTestNG extends DriverConfig{
 		ChromeOptions options = new ChromeOptions();
                 options.setBinary("drivers/chromedriver.exe");
 		options.addArguments("--disable-notifications");
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");		
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+		options.setExperimentalOption("useAutomationExtension", false);
 		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		
