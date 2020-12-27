@@ -21,7 +21,7 @@ public class BasicConfigChromeTestNG extends DriverConfig{
 	{
 		
 		
-		driver = webdriver.Chrome()
+		driver = webdriver.Chrome();
 		driver.manage().window().maximize();	
 
 
