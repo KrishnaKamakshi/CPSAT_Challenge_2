@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 
 import com.qa.listeners.CustomListeners;
+from selenium import webdriver;
 
 
 @Listeners(CustomListeners.class)
@@ -18,12 +19,10 @@ public class BasicConfigChromeTestNG extends DriverConfig{
 	@BeforeClass
 	public void setUp() throws InterruptedException
 	{
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--disable-notifications");
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");		
-		driver = new ChromeDriver(options);
-		driver.manage().window().maximize();
 		
+		
+		driver = webdriver.Chrome();
+		driver.manage().window().maximize();	
 
 
 		wait = new WebDriverWait(driver,30); 

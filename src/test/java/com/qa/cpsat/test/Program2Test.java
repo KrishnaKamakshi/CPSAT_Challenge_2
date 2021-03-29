@@ -14,22 +14,10 @@ public class Program2Test extends NSEIndiaSteps{
 	
 	@Test
 	public void testNSEIndia() {
-		getURL();
-		for (int i = 0; i < 3; i++) {
-			ConfigConstants.valuOFMarketWindow = getTheTextByIndex(i);
-			ConfigConstants.listString.add(ConfigConstants.valuOFMarketWindow);
-		}
-		log.info("Values of the maximum window is {}" , ConfigConstants.listString);
-		for (int j = 0; j < 3; j++) {
-			ConfigConstants.valuesStore[j] = getTheTextByValueOfWindows(j);
-			ConfigConstants.valuesStoreInt[j] = Integer.parseInt(ConfigConstants.valuesStore[j]);
-			ConfigConstants.list.add(ConfigConstants.valuesStoreInt[j]);
+		getURL(); 
 
-		}
-		log.info("List is {}" , ConfigConstants.list);
-		int minList = Collections.min(ConfigConstants.list);
-		log.info("Values of the minimum is {}" , minList);
 
+		
 	}
 
 }

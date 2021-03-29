@@ -4,10 +4,7 @@
   <test thread-count="5" name="CPSAT Challenge 2-new-azuredevops-5">
     <classes>
       <class name="com.qa.cpsat.test.Program2Test"/>
-      <class name="com.qa.cpsat.test.Program3Test"/>
-      <class name="com.qa.cpsat.test.Program4Test"/>
-      <class name="com.qa.cpsat.test.Program5Test"/>
-      <class name="com.qa.cpsat.test.Program6Test"/>
+    
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

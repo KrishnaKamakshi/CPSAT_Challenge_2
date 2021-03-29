@@ -2,12 +2,13 @@
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoftestt.com/azure/devops/pipelines/languages/java testing Automation - DevOps Automation testing 20122020
+# ToDo : drivers on cloud by changing the yaml files 
 
 trigger:
 - azure-pipelines-newbranch
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-latest'
 
 steps:
 - task: Maven@3
@@ -19,4 +20,4 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'clean'
+    goals: 'clean test -DsuiteXmlFile=challlenge-2-suite.xml'
